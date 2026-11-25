@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkyWings — Book Your Flight</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <span class="logo-icon">✈</span>
+        SKYWINGS
+      </a>
+      <ul class="nav-links">
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#book">Book</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#book" class="nav-cta">Book a Flight</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="stars" id="stars"></div>
+
+    <!-- MAIN PLANE (RIGHT SIDE, FACING FORWARD) -->
+    <div class="main-plane-wrapper" id="mainPlane">
+      <!-- Reliable, high-quality transparent airplane image -->
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/3125/3125713.png"
+        alt="Commercial airplane"
+        class="main-plane-img"
+      />
+    </div>
+
+    <!-- SECONDARY PLANE (FLIES ACROSS ON SCROLL) -->
+    <div class="flying-plane" id="flyingPlane">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/3125/3125713.png"
+        alt="Flying airplane"
+        class="flying-plane-img"
+      />
+      <div class="jet-trail" id="jetTrail"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge reveal-up">
+        <span class="badge-dot"></span>
+        Now flying to 40+ destinations
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line reveal-up">The World</span>
+        <span class="title-line accent reveal-up">Is Yours.</span>
+      </h1>
+      <p class="hero-sub reveal-up">
+        Book your next adventure with SkyWings. Best prices, real-time availability, and flights to every continent.
+      </p>
+      <div class="hero-actions reveal-up">
+        <a href="#book" class="btn btn-primary">Book Now</a>
+        <a href="#destinations" class="btn btn-outline">Explore Destinations</a>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <span>Scroll to take off</span>
+      <div class="scroll-arrow">↓</div>
+    </div>
+  </section>
+
+  <!-- ============ BOOKING FORM ============ -->
+  <section class="section book-section" id="book">
+    <div class="section-inner">
+      <div class="section-head reveal-up">
+        <span class="kicker">Book Your Flight</span>
+        <h2>Where To Next?</h2>
+        <p>Search hundreds of flights to find your perfect journey.</p>
+      </div>
+
+      <form class="booking-form reveal-up" id="bookingForm">
+        <div class="form-grid">
+          <div class="form-group">
+            <label>From</label>
+            <select required>
+              <option value="">Select city</option>
+              <option>Nairobi (NBO)</option>
+              <option>London (LHR)</option>
+              <option>New York (JFK)</option>
+              <option>Dubai (DXB)</option>
+              <option>Tokyo (HND)</option>
+              <option>Paris (CDG)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>To</label>
+            <select required>
+              <option value="">Select city</option>
+              <option>Nairobi (NBO)</option>
+              <option>London (LHR)</option>
+              <option>New York (JFK)</option>
+              <option>Dubai (DXB)</option>
+              <option>Tokyo (HND)</option>
+              <option>Paris (CDG)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Departure</label>
+            <input type="date" required />
+          </div>
+          <div class="form-group">
+            <label>Return</label>
+            <input type="date" />
+          </div>
+          <div class="form-group">
+            <label>Passengers</label>
+            <select required>
+              <option>1 Adult</option>
+              <option>2 Adults</option>
+              <option>3 Adults</option>
+              <option>Family (4+)</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-search">Search Flights</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ DESTINATIONS ============ -->
+  <section class="section destinations" id="destinations">
+    <div class="section-inner">
+      <div class="section-head reveal-up">
+        <span class="kicker">Top Destinations</span>
+        <h2>Flights From Kenya</h2>
+        <p>Direct and one-stop flights, with real-time pricing.</p>
+      </div>
+
+      <div class="dest-grid">
+        <div class="dest-card reveal-up">
+          <div class="dest-image">
+            <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&q=80" alt="London" />
+            <div class="dest-overlay">
+              <span class="dest-country">United Kingdom</span>
+            </div>
+          </div>
+          <div class="dest-info">
+            <h3>Nairobi → London</h3>
+            <p class="dest-details">Direct flight · 8h 30m · Kenya Airways</p>
+            <div class="dest-price-row">
+              <span class="dest-price">$680</span>
+              <span class="dest-old">$850</span>
+            </div>
+            <button class="btn btn-outline btn-book" data-dest="London">Book Now</button>
+          </div>
+        </div>
+
+        <div class="dest-card reveal-up">
+          <div class="dest-image">
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80" alt="Dubai" />
+            <div class="dest-overlay">
+              <span class="dest-country">UAE</span>
+            </div>
+          </div>
+          <div class="dest-info">
+            <h3>Nairobi → Dubai</h3>
+            <p class="dest-details">Direct flight · 5h 15m · Emirates</p>
+            <div class="dest-price-row">
+              <span class="dest-price">$420</span>
+              <span class="dest-old">$560</span>
+            </div>
+            <button class="btn btn-outline btn-book" data-dest="Dubai">Book Now</button>
+          </div>
+        </div>
+
+        <div class="dest-card reveal-up">
+          <div class="dest-image">
+            <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&q=80" alt="Tokyo" />
+            <div class="dest-overlay">
+              <span class="dest-country">Japan</span>
+            </div>
+          </div>
+          <div class="dest-info">
+            <h3>Nairobi → Tokyo</h3>
+            <p class="dest-details">1 stop · 17h 20m · Qatar Airways</p>
+            <div class="dest-price-row">
+              <span class="dest-price">$1,120</span>
+              <span class="dest-old">$1,400</span>
+            </div>
+            <button class="btn btn-outline btn-book" data-dest="Tokyo">Book Now</button>
+          </div>
+        </div>
+
+        <div class="dest-card reveal-up">
+          <div class="dest-image">
+            <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=800&q=80" alt="New York" />
+            <div class="dest-overlay">
+              <span class="dest-country">USA</span>
+            </div>
+          </div>
+          <div class="dest-info">
+            <h3>Nairobi → New York</h3>
+            <p class="dest-details">1 stop · 16h 45m · Ethiopian Airlines</p>
+            <div class="dest-price-row">
+              <span class="dest-price">$950</span>
+              <span class="dest-old">$1,200</span>
+            </div>
+            <button class="btn btn-outline btn-book" data-dest="New York">Book Now</button>
+          </div>
+        </div>
+
+        <div class="dest-card reveal-up">
+          <div class="dest-image">
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=80" alt="Paris" />
+            <div class="dest-overlay">
+              <span class="dest-country">France</span>
+            </div>
+          </div>
+          <div class="dest-info">
+            <h3>Nairobi → Paris</h3>
+            <p class="dest-details">Direct flight · 8h 45m · Air France</p>
+            <div class="dest-price-row">
+              <span class="dest-price">$720</span>
+              <span class="dest-old">$900</span>
+            </div>
+            <button class="btn btn-outline btn-book" data-dest="Paris">Book Now</button>
+          </div>
+        </div>
+
+        <div class="dest-card reveal-up">
+          <div class="dest-image">
+            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80" alt="Bali" />
+            <div class="dest-overlay">
+              <span class="dest-country">Indonesia</span>
+            </div>
+          </div>
+          <div class="dest-info">
+            <h3>Nairobi → Bali</h3>
+            <p class="dest-details">1 stop · 14h 30m · Qatar Airways</p>
+            <div class="dest-price-row">
+              <span class="dest-price">$890</span>
+              <span class="dest-old">$1,100</span>
+            </div>
+            <button class="btn btn-outline btn-book" data-dest="Bali">Book Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section about" id="about">
+    <div class="section-inner about-grid">
+      <div class="about-text">
+        <span class="kicker reveal-up">Why SkyWings</span>
+        <h2 class="reveal-up">Flying Made Simple</h2>
+        <p class="reveal-up">
+          We connect Kenya to the world with transparent pricing, real-time availability, and hassle-free booking. No hidden fees. No surprises.
+        </p>
+        <ul class="about-list">
+          <li class="reveal-up">Best price guarantee</li>
+          <li class="reveal-up">24/7 customer support</li>
+          <li class="reveal-up">Instant e-ticket delivery</li>
+          <li class="reveal-up">Free cancellation within 24h</li>
+        </ul>
+      </div>
+      <div class="about-image reveal-up">
+        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&q=80" alt="Airplane wing view" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">✈</span>
+        SKYWINGS
+      </div>
+      <p>© 2026 SkyWings. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
